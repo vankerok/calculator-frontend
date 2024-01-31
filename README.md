@@ -3,7 +3,7 @@
 ![Calculator Preview](Calculator_Preview.png)
 
 
-### Usage
+## Usage
 
 1. Clone the repository to your local machine
 ```
