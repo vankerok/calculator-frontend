@@ -5,7 +5,8 @@ const CalcProvider = ({ children }) => {
     const [calc, setCalc] = useState({
         sign: "",
         num: 0,
-        res: 0
+        res: 0,
+        operator: ""
     });
 
     const providerValue = {
@@ -13,7 +14,7 @@ const CalcProvider = ({ children }) => {
     }
 
     return(
-        <CalcContext.Provider value = {providerValue}>
+        <CalcContext.Provider className = 'CalcContext' value = {providerValue}>
             { children }
         </CalcContext.Provider>
     );

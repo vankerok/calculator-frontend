@@ -61,6 +61,8 @@ const Button = ({ value }) => {
     const operatorClick = (operator) => {
         setCalc({
             ...calc,
+            res: calc.num,
+            num: 0,
             operator: operator
         })
 
@@ -70,13 +72,13 @@ const Button = ({ value }) => {
         const operators = {
             '+': (a,b) => a + b,
             '-': (a,b) => a - b,
-            '*': (a,b) => a * b,
+            'x': (a,b) => a * b,
             '/': (a,b) => a / b,
         }
 
         setCalc({
             ...calc,
-            num: operators[calc.operator](parseFloat(calc.res), parseFloat(calc.num))
+            num: operators[calc.operator](parseFloat(calc.res), parseFloat(calc.num)).toFixed(7)
         })
     }
 
@@ -98,7 +100,7 @@ const Button = ({ value }) => {
             '9': () =>  numClick('9'),
             '+': () => operatorClick('+'),
             '-': () => operatorClick('-'),
-            '*': () => operatorClick('*'),
+            'x': () => operatorClick('x'),
             '/': () => operatorClick('/'),
             '=': () => equalClick(),
         }

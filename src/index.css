@@ -16,8 +16,12 @@ body {
 }
 
 .Screen {
-  height: 4rem;
-  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  inline-size: 16.1rem;
+  block-size: 4rem;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  margin-bottom: 1.5rem;
 }
 
 .Wrapper {
