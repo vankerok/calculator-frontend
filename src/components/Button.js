@@ -75,10 +75,10 @@ const Button = ({ value }) => {
             'x': (a,b) => a * b,
             '/': (a,b) => a / b,
         }
-
+        
         setCalc({
             ...calc,
-            num: operators[calc.operator](parseFloat(calc.res), parseFloat(calc.num)).toFixed(7)
+            num: Math.round(operators[calc.operator](parseFloat(calc.res), parseFloat(calc.num))*10**7)/10**7
         })
     }
 
